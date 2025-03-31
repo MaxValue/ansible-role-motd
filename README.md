@@ -66,5 +66,6 @@ You can support the development of this role and other similar roles by donating
 ## Author Information
 
 This role was created in 2025 by Max Fuxjäger:
+
 * Mastodon: [@maxvalue@chaos.social](https://chaos.social/@maxvalue)
 * Matrix: @ypsilon:matrix.org
