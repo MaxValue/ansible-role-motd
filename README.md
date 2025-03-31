@@ -4,6 +4,7 @@ An Ansible Role that configures motd on Ubuntu (for now).
 
 [TOC]
 
+
 ## Role Variables
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
