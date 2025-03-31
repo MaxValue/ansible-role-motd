@@ -1,0 +1,9 @@
+#!/bin/sh
+
+printf "\n"
+printf "## Getting Help ##\n"
+printf " * Upstream Documentation:  https://help.ubuntu.com\n"
+{% if motd_documentation_url is defined %}
+printf " * Documentation:  {{ motd_documentation_url }}\n"
+{% endif %}
+printf "\n"

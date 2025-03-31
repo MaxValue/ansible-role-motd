@@ -1,0 +1,5 @@
+#!/bin/sh
+
+{% if motd_infotext is defined %}
+printf "\n{{ motd_infotext }}"
+{% endif %}

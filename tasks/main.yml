@@ -1,0 +1,28 @@
+---
+- name: Copy motd snippets
+  # desc: All template filenames defined by motd_snippets_custom are copied to the config dir.
+  become: true
+  ansible.builtin.template:
+    src: "{{ item }}"
+    dest: "{{ motd_configdir }}/{{ item }}"
+    owner: root
+    group: root
+    mode: "u+rw,g+r,o+r"
+  loop: "{{ motd_snippets_custom }}"
+
+- name: Enable wanted snippets
+  # desc: All files defined by motd_snippets_enabled get the execute permission applied.
+  become: true
+  ansible.builtin.file:
+    mode: "+x"
+    dest: "{{ motd_configdir }}/{{ item }}"
+  loop: "{{ motd_snippets_enabled }}"
+
+- name: Disable unwanted snippets
+  # desc: All files defined by motd_snippets_disabled get the execute permission taken away.
+  become: true
+  ansible.builtin.file:
+    mode: "-x"
+    dest: "{{ motd_configdir }}/{{ item }}"
+  loop: "{{ motd_snippets_disabled }}"
+...

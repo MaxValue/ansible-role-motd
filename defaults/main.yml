@@ -1,0 +1,15 @@
+---
+motd_configdir: "/etc/update-motd.d"
+motd_snippets_custom:
+  - 05-custom-uptime-users
+  - 07-custom-info
+  - 10-custom-help-text
+motd_snippets_enabled:
+  - 05-custom-uptime-users
+  - 07-custom-info
+  - 10-custom-help-text
+motd_snippets_disabled:
+  - 10-help-text
+  - 50-motd-news
+  - 91-contract-ua-esm-status
+...
